@@ -23,13 +23,13 @@ subject <- rbind(test_subject, train_subject)
 activity <- rbind(test_y, train_y)
 x <- rbind(test_x, train_x)
 
-# Associated the activity ID with its matching activity label
+# Associates the activity ID with its matching activity label
 activity <- activity %>% inner_join(activities, by = "activity_id")
 
 # Merge results of columns altogether
 results <- cbind(subject, activity, x)
 
-# Apply labels on results
+# Rename columns with meaningful names
 normalized_names <- make.names(features$feature, unique=TRUE, allow_ = TRUE)
 names(results) <- append(c("subject", "activity_id", "activity"), normalized_names)
 
@@ -41,5 +41,5 @@ averages <- filtered %>%
   group_by(subject, activity) %>%
   summarise_each(funs(mean))
 
-# Let's some of the final aggregated values!
+# Let's see some of the final aggregated values!
 print(averages, n=50)
