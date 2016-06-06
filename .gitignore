@@ -1,3 +1,7 @@
+# Data files
+getdata-projectfiles-UCI HAR Dataset.zip
+UCI HAR Dataset
+
 # History files
 .Rhistory
 .Rapp.history
@@ -17,3 +21,6 @@ vignettes/*.pdf
 
 # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
 .httr-oauth
+
+# MacOSX
+.DS_Store
