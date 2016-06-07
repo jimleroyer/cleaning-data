@@ -1,6 +1,8 @@
 # Code book on tidy data 
 
-## Source
+This code book explains the data found in the `tidy_data.csv`.
+
+## Information on Experimental Source Study
 
 The source data set comes from a study named *Human Activity Recognition Using Smartphones Data Set*. A full description of the original data set can be found at [this link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). The original data set was downloaded from [this link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). The original description is as follows:
 
@@ -106,3 +108,13 @@ The source data set comes from a study named *Human Activity Recognition Using S
  * Column 88: `angle.Z.gravityMean.`
 
 Columns 3 to 88 represents means and standard deviations for metrics recorded by the *Human Activity Recognition* study. 
+
+## Summary Choices
+
+The represented data follows a "wide format" that respects the rules of tidy data:
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table
+
+Hence segregated data that were in different files are now in the same file containing rows per subject, activity and associated metrics. These latter columns are properly identified and their values are in human redable format.  
