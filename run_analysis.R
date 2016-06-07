@@ -4,6 +4,14 @@ library(data.table)
 
 options(stringsAsFactors=FALSE)
 
+# Download & extract data if not existing in workspace
+zip_file <- "uci_har_dataset.zip"
+if (!file.exists(zip_file)) {
+  url_data <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+  download.file(url_data, zip_file, method = "curl")
+  unzip(zip_file, overwrite = F)
+}
+
 # Test data
 test_subject <- read.table("UCI HAR Dataset/test/subject_test.txt") # IDs of the subject
 test_x <- read.table("UCI HAR Dataset/test/X_test.txt") # rows of the test results
