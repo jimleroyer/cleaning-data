@@ -117,4 +117,4 @@ The represented data follows a "wide format" that respects the rules of tidy dat
 2. Each observation forms a row.
 3. Each type of observational unit forms a table
 
-Hence segregated data that were in different files are now in the same file containing rows per subject, activity and associated metrics. These latter columns are properly identified and their values are in human redable format.  
+Hence segregated data that were in different files are now in the same file containing several rows for each observation of subject, performed activity and associated metrics for the observation. These latter columns are properly identified and their values are in human redable format.  
