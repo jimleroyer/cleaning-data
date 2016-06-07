@@ -32,7 +32,7 @@ activity <- rbind(test_y, train_y)
 x <- rbind(test_x, train_x)
 
 # Associates the activity ID with its matching activity label
-activities$activity <- tolower(activities$activity)
+activities$activity <- tolower(activities$activity) # lower activity labels
 activity <- activity %>% inner_join(activities, by = "activity_id")
 
 # Merge results of columns altogether
