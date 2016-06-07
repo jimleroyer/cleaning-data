@@ -5,7 +5,7 @@ Assignment for the "Getting and Cleaning Data Course Project" from the Johns Hop
 ## Instructions
 
 1. Execute the `run_analysis.R` R script by running the following command: `r -f run_analysis.R`.
-1. By the ebd of execution, two files should have been generated in the workspace root folder:
+1. By the end of execution, two files should have been generated in the workspace root folder:
   1. **tidy_data.csv**: the tidy data version of the source data set
   1. **tidy_data_mean.csv**: the summarized version of averaged standard deviations and averaged means of the metrics by group and activity.
 
