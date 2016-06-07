@@ -42,13 +42,20 @@ results <- cbind(subject, activity, x)
 normalized_names <- make.names(features$feature, unique=TRUE, allow_ = TRUE)
 names(results) <- append(c("subject", "activity_id", "activity"), normalized_names)
 
-# filter in columns with standard deviation and mean in their names
+# Filter in columns with standard deviation and mean in their names
 filtered <- results %>% select(subject, activity, contains("std"), contains("mean"))
+
+# Save the tidy data (as represented by step 1-4 requirements)
+write.csv(filtered, "tidy_data.csv", row.names = F)
 
 # Calculate mean on selected columns, grouped by subjects and activities
 averages <- filtered %>% 
   group_by(subject, activity) %>%
   summarise_each(funs(mean))
+
+# Save the tidy data (as represented by step 1-4 requirements)
+write.csv(averages, "tidy_data_mean.csv", row.names = F)
+
 
 # Let's see some of the final aggregated values!
 print(averages, n=50)

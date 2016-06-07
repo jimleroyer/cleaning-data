@@ -2,6 +2,8 @@
 getdata-projectfiles-UCI HAR Dataset.zip
 uci_har_dataset.zip
 UCI HAR Dataset
+tidy_data.csv
+tidy_data_mean.csv
 
 # History files
 .Rhistory
